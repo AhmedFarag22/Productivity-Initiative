@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Initiative</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#d00000',secondary:'#ffd700'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    
+   <style>
+        
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+           /* background-image: url('assets/background.jpg');*/
+        }
+        .top-header {
+            background: linear-gradient(to right, #000000, #333333);
+        }
+        .main-nav {
+            background: linear-gradient(to right, #f5f5f5, #ffffff);
+        }
+        .hero-slider {
+            background-image: url('assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .news-card {
+            border-left: 3px solid #ffd700;
+        }
+        .footer {
+            background: linear-gradient(to right, #000000, #222222);
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #ffd700;
+        }
+        
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        .nav-button {
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+        }
+        .nav-button.active {
+            background-color: #d00000;
+            color: white !important;
+        }
+        
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Header -->
+    <div class="top-header text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            
+            <div class="flex items-center space-x-4">
+                <div class="flex space-x-3">
+                    <a href="https://www.facebook.com/share/12KkJ9rP5f5/?mibextid=wwXIfr" class="w-6 h-6 flex items-center justify-center hover:text-gray-300" target="_blank">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                   
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo and Main Navigation -->
+    <div class="main-nav shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col items-center">
+                <div class="mb-4 flex items-center">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-3">
+                        <img src="assets/logo.jpg" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Productivity Initiative</h1>
+                        
+                    </div>
+                </div>
+                
+                <nav class="w-full">
+                    <ul class="flex justify-center space-x-1 border-t border-b border-gray-200 py-3">
+                        <li><a href="main.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">Home</a></li>
+                        <li><a href="FAQ.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">FAQ</a></li>
+              
+                       
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Hero Slider -->
+    <div class="relative hero-slider h-[500px] overflow-hidden">
+        <div class="absolute inset-0 hero-overlay flex items-center">
+            <div class="container mx-auto px-4">
+                <div class="max-w-2xl text-white">
+                    <h3 class="text-lg font-semibold mb-2">
+                        The Productivity Initiative
+                      </h3>
+                    
+                 <p class="text-gray-600 mb-4">
+                    Empowering Egypt’s Youth
+                    At a time when productivity has become a difficult dream for many young people—due to unemployment, economic hardships, and the pressures of daily life—I decided to dedicate my graduation project to shedding light on the realities faced by Egyptian youth and to propose practical solutions that can truly be applied on the ground.
+                    This project isn’t just words on paper; it’s a sincere attempt to open a new door to understanding the challenges confronting an entire generation—and how we can overcome them with practical thinking and a hopeful spirit.
+                    By combining the Egyptian reality with German-inspired ideas—such as strategic planning, vocational training, and gradual independence—I’ve tried to build a vision that brings together both ambition and action, turning dreams into achievable steps
+                </p>
+                    
+                    
+                   
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <!-- News and Announcements -->
+    <div class="mb-12">
+        <div class="flex justify-between items-center mb-6">
+          
+         
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="news-card bg-white rounded shadow-sm overflow-hidden">
+            
+            <div class="p-5">
+              
+              <h3 class="text-lg font-semibold mb-2">
+                Real Economic and Social Independence for Egypt’s Youth
+              </h3>
+              <p class="text-gray-600 mb-4">
+                A graduation project that sheds light on the challenges facing Egyptian youth in achieving true economic and social independence—especially amid unemployment, the housing crisis, and delayed marriage. It presents solutions inspired by German thinking, adapted to fit the Egyptian context.
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="news-card bg-white rounded shadow-sm overflow-hidden">
+            
+            <div class="p-5">
+              
+              <h3 class="text-lg font-semibold mb-2">
+                Who We Are
+              </h3>
+              <p class="text-gray-600 mb-4">
+                I’m a young Egyptian woman who sees how independence has become a distant dream for an entire generation. That’s why I chose to dedicate my graduation project to an issue that touches every household in Egypt: youth independence.
+Through field research, real social dialogues, and a deep analysis of the current reality, I’ve worked to shape a different vision—one that reflects a future worthy of us
+              </p>
+              
+            </div>
+          </div>
+
+          <div class="news-card bg-white rounded shadow-sm overflow-hidden">
+           
+            <div class="p-5">
+              
+              <h3 class="text-lg font-semibold mb-2">
+                Our Goals
+              </h3>
+              <p class="text-gray-600 mb-4">
+                <h1>• To support the idea of economic and social independence as a fundamental right.</h1>
+                <h1>• To raise awareness about the challenges faced by today’s youth.</h1>
+                <h1>• To offer practical solutions inspired by the German experience.</h1>
+                <h1>• To create a space for dialogue between young people and decision-makers.</h1>
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- Main Content -->
+    <div class="container mx-auto px-4 py-12">
+        
+        
+       
+        <div class="mb-12">
+            
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="news-card bg-white rounded shadow-sm overflow-hidden">
+                    <img src="assets/photo1.jpg">
+                    
+                </div>
+                
+                <div class="news-card bg-white rounded shadow-sm overflow-hidden">
+                    <img src="assets/photo2.jpg">
+                    
+                </div>
+                
+                <div class="news-card bg-white rounded shadow-sm overflow-hidden">
+                    <img src="assets/photo3.jpg">
+                    
+                </div>
+            </div>
+        </div>
+        
+       
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3">
+                            <img src="assets/logo.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3 class="font-bold">
+                                Productivity Initiative</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/share/12KkJ9rP5f5/?mibextid=wwXIfr" class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-primary rounded-full" target="_blank">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 flex items-center justify-center text-gray-300 mr-2 mt-0.5"><i class="ri-map-pin-line"></i></span>
+                            <span class="text-gray-300">Cairo, Egypt</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 flex items-center justify-center text-gray-300 mr-2 mt-0.5"><i class="ri-phone-line"></i></span>
+                            <span class="text-gray-300">01503039441</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 flex items-center justify-center text-gray-300 mr-2 mt-0.5"><i class="ri-mail-line"></i></span>
+                            <span class="text-gray-300">info@Productivity.edu</span>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025  All rights reserved.</p>
+                
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const navButtons = document.querySelectorAll('.nav-button');
+    const currentPage = window.location.pathname.split('/').pop() || 'main.html';
+
+    navButtons.forEach(button => {
+        
+        if (button.getAttribute('href') === currentPage) {
+            button.classList.add('active');
+        }
+
+        button.addEventListener('click', function(e) {
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+    </script>
+</body>
+</html>

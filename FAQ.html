@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productivity Initiative</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#d00000',secondary:'#ffd700'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+   
+   <style>
+        
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Open Sans', sans-serif;
+           background-image: url('assets/background.jpg');
+        }
+        .top-header {
+            background: linear-gradient(to right, #000000, #333333);
+        }
+        .main-nav {
+            background: linear-gradient(to right, #f5f5f5, #ffffff);
+        }
+        .hero-slider {
+            background-image: url('assets/background.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+        }
+        .card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .news-card {
+            border-left: 3px solid #ffd700;
+        }
+        .footer {
+            background: linear-gradient(to right, #000000, #222222);
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: #ffd700;
+        }
+        
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        .nav-button {
+            transition: all 0.3s ease;
+        }
+        .nav-button:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+        }
+        .nav-button.active {
+            background-color: #d00000;
+            color: white !important;
+        }
+        
+        .hero-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* تنسيقات الأسئلة الشائعة */
+.faq-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.faq-title {
+    color: #939393; /* اللون الأساسي المحدد في التصميم */
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 700;
+}
+
+.faq-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-question {
+    color: #333;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.faq-answer {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    
+    
+}
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Top Header -->
+    <div class="top-header text-white py-2">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            
+            <div class="flex items-center space-x-4">
+                <div class="flex space-x-3">
+                    <a href="https://www.facebook.com/share/12KkJ9rP5f5/?mibextid=wwXIfr" class="w-6 h-6 flex items-center justify-center hover:text-gray-300" target="_blank">
+                        <i class="ri-facebook-fill"></i>
+                    </a>
+                   
+                </div>
+            
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo and Main Navigation -->
+    <div class="main-nav shadow-sm">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex flex-col items-center">
+                <div class="mb-4 flex items-center">
+                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center mr-3">
+                        <img src="assets/logo.jpg" alt="">
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">Productivity Initiative</h1>
+                        
+                    </div>
+                </div>
+                
+                <nav class="w-full">
+                    <ul class="flex justify-center space-x-1 border-t border-b border-gray-200 py-3">
+                        <li><a href="main.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">Home</a></li>
+                        <li><a href="FAQ.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">FAQ</a></li>
+              
+                       
+                </nav>
+            </div>
+        </div>
+
+    </div>
+
+   
+
+    <div class="faq-container">
+        <h5 class="faq-title">Frequently Asked Questions (FAQ)</h5>
+        
+        <div class="faq-item">
+            <div class="faq-question">1. What is the topic of the graduation project?</div>
+            <div class="faq-answer">The project focuses on the economic and social independence of Egyptian youth, by analyzing the impact of unemployment and the housing crisis, while offering solutions inspired by the German model.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">2. Why was this topic chosen?</div>
+            <div class="faq-answer">Because it reflects a real issue that most young people in Egypt are currently facing. It's one of the most pressing challenges affecting their future.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">3. What is the connection between unemployment and the housing crisis?</div>
+            <div class="faq-answer">Both are deeply connected — unemployment delays financial independence, while the housing crisis hinders social independence. Together, they create a cycle of prolonged dependency.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">4. What German ideas were applied in the project?</div>
+            <div class="faq-answer">The project draws from German approaches in urban planning, technical education, vocational training, and encouraging early independence among youth.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">5. Are the proposed solutions applicable in Egypt?</div>
+            <div class="faq-answer">Definitely. The solutions weren't copied directly—they were adapted and tailored to fit the Egyptian context and youth needs, through realistic and gradual steps.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">6. Were any real-life experiences included in the project?</div>
+            <div class="faq-answer">Yes, real success stories of Egyptian youth who managed to balance work and study and achieved a degree of independence were featured, to serve as inspiration for others.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">7. How does the project aim to change youth perspectives?</div>
+            <div class="faq-answer">The project aims to shift young people's mindset—encouraging them to rely on themselves, seek out opportunities, and align their education with market demands instead of waiting for chances to come.</div>
+        </div>
+    </div> 
+
+
+   
+
+    <!-- Footer -->
+    <footer class="footer text-white pt-12 pb-6">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3">
+                            <img src="assets/logo.jpg" alt="">
+                        </div>
+                        <div>
+                            <h3 class="font-bold">
+                                Productivity Initiative</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/share/12KkJ9rP5f5/?mibextid=wwXIfr" class="w-8 h-8 flex items-center justify-center bg-gray-700 hover:bg-primary rounded-full" target="_blank">
+                            <i class="ri-facebook-fill"></i>
+                        </a>
+                        
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 flex items-center justify-center text-gray-300 mr-2 mt-0.5"><i class="ri-map-pin-line"></i></span>
+                            <span class="text-gray-300">Cairo, Egypt</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 flex items-center justify-center text-gray-300 mr-2 mt-0.5"><i class="ri-phone-line"></i></span>
+                            <span class="text-gray-300">01503039441</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="w-5 h-5 flex items-center justify-center text-gray-300 mr-2 mt-0.5"><i class="ri-mail-line"></i></span>
+                            <span class="text-gray-300">info@Productivity.edu</span>
+                        </li>
+                    </ul>
+                   
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mb-4 md:mb-0">© 2025  All rights reserved.</p>
+                
+            </div>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const navButtons = document.querySelectorAll('.nav-button');
+    const currentPage = window.location.pathname.split('/').pop() || 'main.html';
+
+    navButtons.forEach(button => {
+        
+        if (button.getAttribute('href') === currentPage) {
+            button.classList.add('active');
+        }
+
+        button.addEventListener('click', function(e) {
+            navButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+    </script>
+</body>
+</html>
