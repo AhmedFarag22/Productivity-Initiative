@@ -22,7 +22,7 @@
         .top-header {
             background: linear-gradient(to right, #000000, #333333);
         }
-        .main-nav {
+        .index-nav {
             background: linear-gradient(to right, #f5f5f5, #ffffff);
         }
         .hero-slider {
@@ -107,8 +107,8 @@
         </div>
     </div>
 
-    <!-- Logo and Main Navigation -->
-    <div class="main-nav shadow-sm">
+    <!-- Logo and index Navigation -->
+    <div class="index-nav shadow-sm">
         <div class="container mx-auto px-4 py-4">
             <div class="flex flex-col items-center">
                 <div class="mb-4 flex items-center">
@@ -123,7 +123,7 @@
                 
                 <nav class="w-full">
                     <ul class="flex justify-center space-x-1 border-t border-b border-gray-200 py-3">
-                        <li><a href="main.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">Home</a></li>
+                        <li><a href="index.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">Home</a></li>
                         <li><a href="FAQ.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">FAQ</a></li>
               
                        
@@ -211,7 +211,7 @@ Through field research, real social dialogues, and a deep analysis of the curren
       </div>
 
 
-    <!-- Main Content -->
+    <!-- index Content -->
     <div class="container mx-auto px-4 py-12">
         
         
@@ -296,7 +296,7 @@ Through field research, real social dialogues, and a deep analysis of the curren
     <script>
         document.addEventListener('DOMContentLoaded', function() {
     const navButtons = document.querySelectorAll('.nav-button');
-    const currentPage = window.location.pathname.split('/').pop() || 'main.html';
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
 
     navButtons.forEach(button => {
         
