@@ -11,13 +11,43 @@
     <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
-   
+    
    <style>
+     
+    body {
+      background-color: #f8f9fa;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .campaign-section {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 30px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    }
+    .campaign-title {
+      color: #343a40;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+    .campaign-text p {
+      margin-bottom: 1rem;
+      color: #495057;
+      line-height: 1.7;
+    }
+    .campaign-img {
+      width: 100%;
+      margin-top: 20px;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
         
         :where([class^="ri-"])::before { content: "\f3c2"; }
         body {
             font-family: 'Open Sans', sans-serif;
-           background-image: url('assets/background2.jpg');
+           /* background-image: url('assets/background.jpg');*/
         }
         .top-header {
             background: linear-gradient(to right, #000000, #333333);
@@ -26,7 +56,7 @@
             background: linear-gradient(to right, #f5f5f5, #ffffff);
         }
         .hero-slider {
-            background-image: url('assets/background.jpg');
+            background-image: url('assets/background2.jpg');
             background-size: cover;
             background-position: center;
         }
@@ -87,57 +117,7 @@
             color: white !important;
         }
         
-        .hero-content {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease-out forwards;
-}
-
-
-.faq-container {
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 0 1rem;
-}
-
-.faq-title {
-    color: #939393; 
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 2rem;
-    font-weight: 700;
-}
-
-.faq-item {
-    background-color: white;
-    border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.faq-question {
-    color: #333;
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-}
-
-.faq-answer {
-    color: #555;
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    
-    
-}
+        
     </style>
 </head>
 <body class="bg-gray-50">
@@ -176,7 +156,6 @@
                         <li><a href="index.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">Home</a></li>
                         <li><a href="FAQ.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">FAQ</a></li>
                         <li><a href="News.html" class="nav-button  px-4 py-2 text-gray-700 font-medium hover:bg-gray-100 rounded-button whitespace-nowrap">News</a></li>
-              
                        
                 </nav>
             </div>
@@ -184,49 +163,25 @@
 
     </div>
 
-   
-
-    <div class="faq-container">
-        <h5 class="faq-title">Frequently Asked Questions (FAQ)</h5>
-        
-        <div class="faq-item">
-            <div class="faq-question">1. What is the topic of the graduation project?</div>
-            <div class="faq-answer">The project focuses on the economic and social independence of Egyptian youth, by analyzing the impact of unemployment and the housing crisis, while offering solutions inspired by the German model.</div>
+    <div class="campaign-section">
+        <h1 class="campaign-title text-center" style="font-size: 33px;">My Right to Live</h1>
+        <div class="campaign-text">
+          <p>My campaign is called <strong>My Right to Live</strong>.</p>
+          <p>It's about something I see every day. So many young people can't find jobs — even those who studied hard and graduated.</p>
+          <p>And if you try to move out or start your own life, you hit a wall. Apartments are too expensive, and everything feels stuck.</p>
+          <p>While I was doing my graduation research, I started looking for different ways other countries deal with this.</p>
+          <p>I found something inspiring in the German system. They focus on skills, vocational training, shared housing, and real support for youth.</p>
+          <p>It gave me hope. And I thought: why not try to learn from that and adapt it to our reality?</p>
+          <p>This campaign is my way of starting that conversation — to share stories, open minds, and maybe help others think differently about what’s possible.</p>
+          <p>If you're here, then maybe you're looking for something too. Let’s not wait for things to fix themselves.</p>
         </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">2. Why was this topic chosen?</div>
-            <div class="faq-answer">Because it reflects a real issue that most young people in Egypt are currently facing. It's one of the most pressing challenges affecting their future.</div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">3. What is the connection between unemployment and the housing crisis?</div>
-            <div class="faq-answer">Both are deeply connected — unemployment delays financial independence, while the housing crisis hinders social independence. Together, they create a cycle of prolonged dependency.</div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">4. What German ideas were applied in the project?</div>
-            <div class="faq-answer">The project draws from German approaches in urban planning, technical education, vocational training, and encouraging early independence among youth.</div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">5. Are the proposed solutions applicable in Egypt?</div>
-            <div class="faq-answer">Definitely. The solutions weren't copied directly—they were adapted and tailored to fit the Egyptian context and youth needs, through realistic and gradual steps.</div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">6. Were any real-life experiences included in the project?</div>
-            <div class="faq-answer">Yes, real success stories of Egyptian youth who managed to balance work and study and achieved a degree of independence were featured, to serve as inspiration for others.</div>
-        </div>
-        
-        <div class="faq-item">
-            <div class="faq-question">7. How does the project aim to change youth perspectives?</div>
-            <div class="faq-answer">The project aims to shift young people's mindset—encouraging them to rely on themselves, seek out opportunities, and align their education with market demands instead of waiting for chances to come.</div>
-        </div>
-    </div> 
-
-
-   
+    
+        <img src="assets/NewsPhoto.jpg" alt="Campaign Image" class="campaign-img">
+      </div>
+    
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+  
 
     <!-- Footer -->
     <footer class="footer text-white pt-12 pb-6">
